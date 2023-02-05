@@ -1,5 +1,4 @@
 import Jobcard from "./components/Jobcard";
-import main from "./components/main.jpg"
 function App() {
   return (
     <div className="flex bg-slate-200 flex-1 items-center justify-center flex-col h-auto space-y-5">
