@@ -1,12 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-function Jobcard() {
+function Jobcard(props) {
+  const navigate = useNavigate();
+
   return (
-    <div className="bg-white h-[500px] w-[200px] shadow-lg flex flex-col" >
-      <div className="h-full w-full  bg-blue-100"></div>
-      <div className="flex-col pl-5  pt-2 h-full w-full bg-white items-center justify-center">
-      <h2 className="text-2xl text-center font-bold pt-8">He's Seeing Stars:Lewandoski scores 5 in 9 MINUTES!</h2>
-      <h2 className="text-gray-400 text-center text-lg pt-10 font-sans"></h2>
+    <div className=" h-[250px] w-[90%] mx-2 flex flex-col" >
+      <div className="h-[60%] w-[full]  ">
+      <img src={props.img} alt="React Image" />
+      </div>
+      <div className="flex-col h-[40%] pl-5   h-full w-full bg-white items-center justify-center">
+      <Link to ={`/blogs/${props.name}`}>
+
+      <p  className="text-md text-center  -mt-2 ">{props.name}</p>
+</Link>
     </div>
   </div>
   )
